@@ -12,7 +12,7 @@ public class detectarcolision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Detectar plantas correctas (tag compartido)
-        if (collision.gameObject.CompareTag("plantacorrecta"))
+        if (collision.gameObject.CompareTag("contactocorrecto"))
         {
             plantatocada planta = collision.gameObject.GetComponent<plantatocada>();
             if (planta != null && !planta.fueTocada)
