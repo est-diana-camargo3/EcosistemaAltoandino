@@ -6,17 +6,22 @@ public class detectarcolision : MonoBehaviour
 
     void Start()
     {
-        // Encuentra el script de vidas en la escena
         sistemaVidas = FindObjectOfType<vidasdeljugador>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("encenillo"))
+        // Detectar plantas correctas (tag compartido)
+        if (collision.gameObject.CompareTag("plantacorrecta"))
         {
-            sistemaVidas.SumarVida();
-            Destroy(collision.gameObject); // Elimina el árbol después del contacto
+            plantatocada planta = collision.gameObject.GetComponent<plantatocada>();
+            if (planta != null && !planta.fueTocada)
+            {
+                planta.fueTocada = true; // marcar como ya tocada
+                sistemaVidas.SumarVida();
+            }
         }
     }
 }
+
 
