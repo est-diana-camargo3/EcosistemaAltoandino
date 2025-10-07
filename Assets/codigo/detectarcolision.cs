@@ -1,47 +1,54 @@
+using TMPro; 
 using UnityEngine;
-using UnityEngine.SceneManagement; // Para recargar escena (si quisieras)
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class detectarcolision : MonoBehaviour
 {
-    private vidasdeljugador sistemaVidas;
-    private Vector3 posicionInicial;
-
-    void Start()
-    {
-        // Busca el sistema de vidas y guarda la posición inicial del jugador
-        sistemaVidas = FindObjectOfType<vidasdeljugador>();
-        posicionInicial = transform.position;
-    }
+    public vidasdeljugador vidasdeljugador; // referencia al script de las vidas
+    public GameObject panelerrortocoinvasor; // panel con el mensaje de error
+    public TMP_Text textoerrortocoinvasor; 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // ✅ Contacto correcto: plantas o animales del ecosistema
+        // 🌿 Si toca una planta o animal correcto
         if (collision.gameObject.CompareTag("contactocorrecto"))
         {
             plantatocada planta = collision.gameObject.GetComponent<plantatocada>();
             if (planta != null && !planta.fueTocada)
             {
                 planta.fueTocada = true;
-                sistemaVidas.SumarVida();
+                vidasdeljugador.SumarVida(); // suma un corazón
             }
         }
 
-        // ❌ Contacto incorrecto: Paloma Doméstica
+        // 🕊️ Si toca al animal invasor (paloma doméstica)
         if (collision.gameObject.CompareTag("contactoincorrecto"))
         {
-            Debug.Log("⚠️ Contacto con animal invasor: reiniciando juego.");
-
-            // Reinicia vidas
-            sistemaVidas.vidas = 0;
-            sistemaVidas.SendMessage("ActualizarVidas");
-
-            // Devuelve jugador a su posición inicial
-            transform.position = posicionInicial;
-
-            // (Opcional) Si prefieres reiniciar toda la escena:
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(MostrarErrorYReiniciar());
+            // Ejemplo: deshabilitar el script del jugador
+            GetComponent<movimientodeljugador>().enabled = false;
         }
     }
+
+    IEnumerator MostrarErrorYReiniciar()
+    {
+        Debug.Log("⚠️ Panel de error activado");
+
+        // Activar panel
+        panelerrortocoinvasor.SetActive(true);
+        textoerrortocoinvasor.text =
+            "Error: La paloma no es del ecosistema Altoandino Bogotano.\n" +
+            "Vuelve a intentarlo.";
+
+        // Esperar un frame para que Unity dibuje la UI
+        yield return null;
+
+        // Esperar unos segundos en tiempo real antes de pausar o reiniciar
+        yield return new WaitForSecondsRealtime(3f);
+
+        // Reiniciar la escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
-
-
