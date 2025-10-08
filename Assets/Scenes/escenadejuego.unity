@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 162820398}
   - component: {fileID: 162820399}
   m_Layer: 0
-  m_Name: encenillo
+  m_Name: encenillo_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,7 +432,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 176616527}
   - component: {fileID: 176616530}
   m_Layer: 0
-  m_Name: robleandino
+  m_Name: robleandino_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 181701156}
   - component: {fileID: 181701155}
   m_Layer: 0
-  m_Name: reinitadecanada
+  m_Name: reinitadecanada_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 184431103}
   - component: {fileID: 184431102}
   m_Layer: 0
-  m_Name: ardilladecolaroja
+  m_Name: ardilladecolaroja_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1114,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1130,7 +1130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249262027}
   m_Layer: 5
-  m_Name: plantas
+  m_Name: plantas_carpetaempty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 403692770}
   - component: {fileID: 403692773}
   m_Layer: 0
-  m_Name: orquideaepifita
+  m_Name: orquideaepifita_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1302,7 +1302,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1407,7 +1407,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 969, y: 545, z: -10}
+  m_LocalPosition: {x: 959, y: 545, z: -10}
   m_LocalScale: {x: 1.7105675, y: 1.5681019, z: 1.6319094}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 606041109}
   - component: {fileID: 606041108}
   m_Layer: 0
-  m_Name: palomadomestica
+  m_Name: palomadomestica_gameobject
   m_TagString: contactoincorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 723355825}
   - component: {fileID: 723355824}
   m_Layer: 0
-  m_Name: paredinferior
+  m_Name: paredinferior_gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,7 +1942,7 @@ GameObject:
   - component: {fileID: 1107885303}
   - component: {fileID: 1107885302}
   m_Layer: 0
-  m_Name: paredizquierda
+  m_Name: paredizquierda_gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 1212999400}
   - component: {fileID: 1212999399}
   m_Layer: 0
-  m_Name: murcielagofrugivoro
+  m_Name: murcielagofrugivoro_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2446,7 +2446,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2468,7 +2468,7 @@ GameObject:
   - component: {fileID: 1302885479}
   - component: {fileID: 1302885480}
   m_Layer: 0
-  m_Name: jugador
+  m_Name: jugador_gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2656,6 +2656,37 @@ MonoBehaviour:
   vidasdeljugador: {fileID: 8123994}
   panelerrortocoinvasor: {fileID: 1607039228}
   textoerrortocoinvasor: {fileID: 164341660}
+--- !u!1 &1341106721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341106722}
+  m_Layer: 0
+  m_Name: Carpeta_plantas_gameobject_empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341106722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341106721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1080.1022, y: 563.5947, z: -6.192687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1363299034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2701,7 @@ GameObject:
   - component: {fileID: 1363299037}
   - component: {fileID: 1363299036}
   m_Layer: 0
-  m_Name: copeton
+  m_Name: copeton_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2812,7 +2843,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2914,7 +2945,7 @@ GameObject:
   - component: {fileID: 1488503706}
   - component: {fileID: 1488503708}
   m_Layer: 0
-  m_Name: paredsuperior
+  m_Name: paredsuperior_gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3461,7 +3492,7 @@ GameObject:
   - component: {fileID: 2024773624}
   - component: {fileID: 2024773623}
   m_Layer: 0
-  m_Name: paredderecha
+  m_Name: paredderecha_gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3593,7 +3624,7 @@ GameObject:
   - component: {fileID: 2039805126}
   - component: {fileID: 2039805129}
   m_Layer: 0
-  m_Name: manodeoso
+  m_Name: manodeoso_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3946,7 +3977,7 @@ GameObject:
   - component: {fileID: 2137604759}
   - component: {fileID: 2137604758}
   m_Layer: 0
-  m_Name: tinguadepicoverde
+  m_Name: tinguadepicoverde_gameobject
   m_TagString: contactocorrecto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4103,3 +4134,4 @@ SceneRoots:
   - {fileID: 1548308140}
   - {fileID: 1133334226}
   - {fileID: 1589622411}
+  - {fileID: 1341106722}
