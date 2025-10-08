@@ -2481,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5363818194110044256, guid: 2bb4accea61f29042b493bd9693931d9, type: 3}
+      propertyPath: velocidad
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 6336891524444807739, guid: 2bb4accea61f29042b493bd9693931d9, type: 3}
       propertyPath: m_Name
       value: JUGADOR_gameobject_circle
