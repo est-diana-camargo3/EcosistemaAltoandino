@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 773603975938170964}
   - component: {fileID: 8746927864298884385}
   - component: {fileID: 5363818194110044256}
-  - component: {fileID: 8111046351901989848}
   - component: {fileID: 1946641449630130381}
   m_Layer: 0
   m_Name: JUGADOR_gameobject_circle
@@ -164,31 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
---- !u!114 &8111046351901989848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336891524444807739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9287ee32e984414e9f9f2e4ca6b91be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidas: 0
-  corazones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  corazonlleno: {fileID: 21300000, guid: 578b7abd6886a8b49b97776fc9dd7c77, type: 3}
-  corazonvacio: {fileID: 21300000, guid: 1390c098634e1c14080988ed4e4b3f9b, type: 3}
 --- !u!114 &1946641449630130381
 MonoBehaviour:
   m_ObjectHideFlags: 0
