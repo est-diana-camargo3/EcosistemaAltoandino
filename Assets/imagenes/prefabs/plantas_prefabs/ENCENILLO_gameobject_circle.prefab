@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 618538087870814004}
   - component: {fileID: 7058387256312454857}
   - component: {fileID: 2916985884458711673}
-  - component: {fileID: 4838288198328369216}
   m_Layer: 0
   m_Name: ENCENILLO_gameobject_circle
   m_TagString: contactocorrecto
@@ -149,16 +148,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4838288198328369216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2630770111336193924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7692b8af33583c45bc99ada06330988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fueTocada: 0
