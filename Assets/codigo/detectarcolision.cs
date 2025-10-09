@@ -20,8 +20,10 @@ public class detectarcolision : MonoBehaviour
             {
                 planta.fueTocada = true;
                 vidasdeljugador.SumarVida(); // suma un corazón
+                Debug.Log(planta.gameObject.name + " tocada!"); // Para depuración
             }
         }
+
 
         // 🕊️ Si toca al animal invasor (paloma doméstica)
         if (collision.gameObject.CompareTag("contactoincorrecto"))

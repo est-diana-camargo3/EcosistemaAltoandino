@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 public class botonjugardenuevo : MonoBehaviour
 {
     [Header("🎮 Configuración del movimiento flotante")]
-    public float amplitud = 10f;   // Qué tanto se mueve hacia arriba y abajo
-    public float velocidadFlotar = 2f;   // Velocidad del movimiento
+    public float amplitud = 10f;        // Qué tanto se mueve hacia arriba y abajo
+    public float velocidadFlotar = 2f;  // Velocidad del movimiento
 
     [Header("✨ Efecto de reborde pulsante")]
-    public Image rebordeImage;     // Arrastra aquí la imagen del borde amarillo
+    public Image rebordeImage;          // Arrastra aquí la imagen del borde amarillo
     public Color colorBase = new Color(1f, 1f, 0f, 0.5f);  // Amarillo semitransparente
-    public float velocidadBrillo = 2f;   // Velocidad del pulso
-    public float intensidad = 0.5f;      // Qué tanto varía la opacidad
+    public float velocidadBrillo = 2f;  // Velocidad del pulso
+    public float intensidad = 0.5f;     // Qué tanto varía la opacidad
 
     private Vector3 posicionInicial;
 
@@ -38,6 +38,10 @@ public class botonjugardenuevo : MonoBehaviour
     // 🚀 Acción del botón
     public void JugarDeNuevo()
     {
-        SceneManager.LoadScene("escenadejuego");
+        // Debug opcional para confirmar que se ejecuta el clic
+        Debug.Log("🎮 Botón 'Jugar de nuevo' presionado. Cargando escena escenadejuego...");
+
+        // Cargar la escena de manera limpia, reemplazando todo
+        SceneManager.LoadScene("escenadejuego", LoadSceneMode.Single);
     }
 }
