@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class movimientodeljugador : MonoBehaviour
 {
-    public float velocidad = 5f; // Velocidad del jugador
+    public float velocidad = 50f; // Velocidad del jugador
     private Rigidbody2D rb;
     private Vector2 movimiento;
 
@@ -21,6 +21,6 @@ public class movimientodeljugador : MonoBehaviour
     void FixedUpdate()
     {
         // Mover al jugador con físicas
-        rb.MovePosition(rb.position + movimiento * velocidad * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movimiento * velocidad * 4* Time.fixedDeltaTime);
     }
 }
