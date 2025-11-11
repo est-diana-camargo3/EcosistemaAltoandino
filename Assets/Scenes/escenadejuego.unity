@@ -339,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77710825}
   m_Layer: 0
-  m_Name: ArdillaColaRoja
+  m_Name: ARDILLADECOLAROJA_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259652780}
   m_Layer: 0
-  m_Name: Orquidea
+  m_Name: ORQUIDEAEPIFITA_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,7 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273068710}
   m_Layer: 0
-  m_Name: TinguaPicoVerde
+  m_Name: TINGUADEPICOVERDE_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +2012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765312255}
   m_Layer: 0
-  m_Name: ManoDeOso
+  m_Name: MANODEOSO_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2858,7 +2858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301442471}
   m_Layer: 0
-  m_Name: Paloma
+  m_Name: PALOMADOMESTICA_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3095,7 +3095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391383692}
   m_Layer: 0
-  m_Name: Copeton
+  m_Name: COPETON_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3213,7 +3213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430007332}
   m_Layer: 0
-  m_Name: Encenillo
+  m_Name: ENCENILLO_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3892,7 +3892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736681693}
   m_Layer: 0
-  m_Name: Murcielago
+  m_Name: MURCIELAGOFRUGIVORO_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3926,7 +3926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763709305}
   m_Layer: 0
-  m_Name: ReinitaCanada
+  m_Name: REINITADECANADA_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4160,7 +4160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949096534}
   m_Layer: 0
-  m_Name: RobleAndino
+  m_Name: ROBLEANDINO_gameobject_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
