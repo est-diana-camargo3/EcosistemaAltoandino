@@ -1,3 +1,4 @@
+using UnityEngine.Video;   
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +10,7 @@ public class detectarcolision : MonoBehaviour
     public vidasdeljugador vidasdeljugador; // referencia al script de las vidas
     public GameObject panelerrortocoinvasor; // panel con el mensaje de error
     public TMP_Text textoerrortocoinvasor;
-
+    public ReproductorDeVideos reproductorVideos;  // ← referencia al reproductor
     private Animator animator; // referencia al Animator del jugador
 
     void Start()
@@ -22,12 +23,30 @@ public class detectarcolision : MonoBehaviour
         // 🌿 Si toca una planta o animal correcto
         if (collision.gameObject.CompareTag("contactocorrecto"))
         {
+            Debug.Log("COLISION con: " + collision.gameObject.name);
             plantatocada planta = collision.gameObject.GetComponent<plantatocada>();
             if (planta != null && !planta.fueTocada)
             {
                 planta.fueTocada = true;
                 vidasdeljugador.SumarVida(); // suma un corazón
                 Debug.Log(planta.gameObject.name + " tocada!"); // Para depuración
+                                
+                // ✅ reproducir video
+                VideoAsociado va = collision.gameObject.GetComponent<VideoAsociado>();
+
+                if (va == null)
+                {
+                    Debug.LogError("❌ ERROR: El objeto " + collision.gameObject.name + " NO tiene el script VideoAsociado.");
+                }
+                else if (va.clip == null)
+                {
+                    Debug.LogError("❌ ERROR: El objeto " + collision.gameObject.name + " SÍ tiene VideoAsociado pero **NO tiene un VideoClip asignado**.");
+                }
+                else
+                {
+                    Debug.Log("✅ Clip asignado correctamente: " + va.clip.name);
+                    StartCoroutine(ReproducirVideoConRetraso(va.clip));
+                }
             }
         }
 
@@ -46,6 +65,16 @@ public class detectarcolision : MonoBehaviour
             // Iniciar la corrutina del error y reinicio
             StartCoroutine(MostrarErrorYReiniciar());
         }
+    }
+
+    IEnumerator ReproducirVideoConRetraso(VideoClip clip)
+    {
+        // Espera un frame antes de reproducir
+        yield return null;
+
+        reproductorVideos.ReproducirVideo(clip);
+
+        Debug.Log("🎬 Corrutina activada → Reproduciendo video en pantalla.");
     }
 
     IEnumerator MostrarErrorYReiniciar()
