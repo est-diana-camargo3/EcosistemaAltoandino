@@ -1,53 +1,64 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Video;
-using System.Collections;
+using UnityEngine.UI;
 
 public class ReproductorDeVideos : MonoBehaviour
 {
-    public static ReproductorDeVideos instancia;
-    public GameObject panelVideo;
-    public RawImage contenedorVideo;
     public VideoPlayer videoPlayer;
-
-    public movimientodeljugador movimientoJugador; // Para pausar movimiento
+    public RawImage rawImage;
+    public GameObject panelVideo;
+    public movimientodeljugador jugador; // 👈 referencia al script del jugador
 
     void Start()
     {
-        panelVideo.SetActive(false);
-        contenedorVideo.gameObject.SetActive(false);
+        // Al iniciar, ocultar el panel
+        if (panelVideo != null)
+            panelVideo.SetActive(false);
+
+        if (videoPlayer != null)
+            videoPlayer.playOnAwake = false;
     }
 
     public void ReproducirVideo(VideoClip clip)
     {
-        StartCoroutine(MostrarVideo(clip));
-    }
-
-    IEnumerator MostrarVideo(VideoClip clip)
-    {
-        // Pausar movimiento del jugador
-        if (movimientoJugador != null)
-            movimientoJugador.enabled = false;
-
-        panelVideo.SetActive(true);
-        contenedorVideo.gameObject.SetActive(true);
-
-        videoPlayer.clip = clip;
-        videoPlayer.Play();
-
-        // Esperar a que el video termine
-        while (videoPlayer.isPlaying)
+        if (videoPlayer == null || rawImage == null || panelVideo == null)
         {
-            yield return null;
+            Debug.LogError("⚠️ Falta asignar referencias en ReproductorDeVideos.");
+            return;
         }
 
-        // Ocultar video
+        panelVideo.SetActive(true); // mostrar panel
+
+        // 🚫 Desactivar movimiento del jugador mientras se reproduce el video
+        if (jugador != null)
+            jugador.enabled = false;
+
+        videoPlayer.clip = clip;
+        videoPlayer.isLooping = false;
+        videoPlayer.Prepare();
+
+        videoPlayer.prepareCompleted += (vp) =>
+        {
+            Debug.Log("🎬 Video preparado, iniciando reproducción...");
+            rawImage.texture = videoPlayer.targetTexture;
+            videoPlayer.Play();
+        };
+
+        // 🎬 Cuando el video termina
+        videoPlayer.loopPointReached += (vp) =>
+        {
+            CerrarVideo();
+        };
+    }
+
+    public void CerrarVideo()
+    {
+        Debug.Log("🛑 Cerrando video...");
         videoPlayer.Stop();
         panelVideo.SetActive(false);
-        contenedorVideo.gameObject.SetActive(false);
 
-        // Reanudar movimiento
-        if (movimientoJugador != null)
-            movimientoJugador.enabled = true;
+        // ✅ Reactivar movimiento del jugador
+        if (jugador != null)
+            jugador.enabled = true;
     }
 }
