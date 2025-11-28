@@ -10,6 +10,7 @@ public class detectarcolision : MonoBehaviour
     public vidasdeljugador vidasdeljugador; // referencia al script de las vidas
     public GameObject panelerrortocoinvasor; // panel con el mensaje de error
     public TMP_Text textoerrortocoinvasor;
+    public AudioClip sonidoError;
     public ReproductorDeVideos reproductorVideos;  // ← referencia al reproductor
     private Animator animator; // referencia al Animator del jugador
 
@@ -80,6 +81,17 @@ public class detectarcolision : MonoBehaviour
     IEnumerator MostrarErrorYReiniciar()
     {
         Debug.Log("⚠️ Panel de error activado");
+        
+        // 🔊 Reproducir sonido SOLO cuando sale el panel
+        if (sonidoError == null)
+        {
+            Debug.LogError("⚠️ ERROR: No hay AudioClip asignado al sonidoError.");
+        }
+        else
+        {
+            Debug.Log("🔊 REPRODUCIENDO SONIDO DE ERROR...");
+            AudioSource.PlayClipAtPoint(sonidoError, transform.position, 1f);
+        }
 
         // Esperar un momento para que la animación se vea antes de mostrar el panel
         yield return new WaitForSeconds(0.5f);
@@ -90,6 +102,7 @@ public class detectarcolision : MonoBehaviour
             "Error: La paloma no es del ecosistema Altoandino Bogotano.\n" +
             "Vuelve a intentarlo.";
 
+        
         // Esperar unos segundos para mostrar el mensaje y permitir que la animación se reproduzca completa
         yield return new WaitForSecondsRealtime(3f);
 

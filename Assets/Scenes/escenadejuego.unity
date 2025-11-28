@@ -885,7 +885,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11, y: 14}
+  m_Size: {x: 9, y: 14}
   m_EdgeRadius: 0
 --- !u!1 &236806684
 GameObject:
@@ -916,7 +916,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1369,6 +1369,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1946641449630130381, guid: 2bb4accea61f29042b493bd9693931d9, type: 3}
+      propertyPath: audioError
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946641449630130381, guid: 2bb4accea61f29042b493bd9693931d9, type: 3}
+      propertyPath: sonidoError
+      value: 
+      objectReference: {fileID: 8300000, guid: 4619ba7ad2237ec4c87ff1bba8c841f1, type: 3}
+    - target: {fileID: 1946641449630130381, guid: 2bb4accea61f29042b493bd9693931d9, type: 3}
       propertyPath: vidasdeljugador
       value: 
       objectReference: {fileID: 8123994}
@@ -1551,7 +1559,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1855,9 +1863,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: ce6827cc17228134895262aef302f88a, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3b5d3732a2ecd9041a2774df7385eda0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 15da6d9b9f1f2c24894df58a597247c5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2478,7 +2486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed728205a8f5a646b59457484909d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 32900000, guid: 066456bb1fc5d8b4ca2b4773d796470c, type: 3}
+  clip: {fileID: 32900000, guid: afffc704f02ec534f8c1554d2fc57c2e, type: 3}
   nombreAnimal: 
   descripcion: 
 --- !u!1001 &783580514
@@ -2621,7 +2629,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5160,7 +5168,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5458,7 +5466,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5693,7 +5701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed728205a8f5a646b59457484909d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 32900000, guid: 066456bb1fc5d8b4ca2b4773d796470c, type: 3}
+  clip: {fileID: 32900000, guid: afffc704f02ec534f8c1554d2fc57c2e, type: 3}
   nombreAnimal: 
   descripcion: 
 --- !u!1 &1841402178
@@ -6179,7 +6187,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 307d74e9a46c8aa479d56c749c40a934, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
